@@ -1,0 +1,92 @@
+{% extends 'main.html' %}
+
+{% block content %}
+<h2 class="section-title">Onze Diensten</h2>
+<p class="section-subtitle">Professionele ondersteuning voor al uw financiële behoeften</p>
+
+<div class="services">
+    <div class="service-card">
+        <h3>📊 Boekhouding</h3>
+        <p>Volledige administratieve ondersteuning, van factuurverwerking tot jaarrekeningen. Wij houden uw financiële zaken up-to-date en overzichtelijk.</p>
+    </div>
+    
+    <div class="service-card">
+        <h3>💼 Salarisadministratie</h3>
+        <p>Nauwkeurige verwerking van uw personeelsadministratie. Van loonstroken tot belastingaangiften, wij regelen het.</p>
+    </div>
+    
+    <div class="service-card">
+        <h3>📈 Belastingadvies</h3>
+        <p>Persoonlijk advies voor uw belastingaangifte. Wij zorgen ervoor dat u niet te veel betaalt en maximaal profiteert van aftrekposten.</p>
+    </div>
+    
+    <div class="service-card">
+        <h3>🎯 Financieel Advies</h3>
+        <p>Strategisch advies voor de groei van uw onderneming. Wij helpen u de juiste financiële beslissingen te nemen.</p>
+    </div>
+</div>
+
+<!-- Why Choose Us -->
+<section style="margin-top: 5rem; text-align: center;">
+    <h2 class="section-title">Waarom Lynq Bookkeeping?</h2>
+    <p class="section-subtitle">Betrouwbaar, persoonlijk en altijd bereikbaar</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div style="padding: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">⚡</div>
+            <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Snel & Efficiënt</h3>
+            <p style="color: #7f8c8d;">Snelle reactietijden en proactieve communicatie</p>
+        </div>
+        
+        <div style="padding: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">💼</div>
+            <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Professioneel</h3>
+            <p style="color: #7f8c8d;">Jarenlange ervaring in diverse sectoren</p>
+        </div>
+        
+        <div style="padding: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🤝</div>
+            <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">Persoonlijk Contact</h3>
+            <p style="color: #7f8c8d;">Direct contact met uw vaste adviseur</p>
+        </div>
+        
+        <div style="padding: 2rem;">
+            <div style="font-size: 3rem; margin-bottom: 1rem;">🔒</div>
+            <h3 style="color: #2c3e50; margin-bottom: 0.5rem;">100% Betrouwbaar</h3>
+            <p style="color: #7f8c8d;">Discrete omgang met uw financiële gegevens</p>
+        </div>
+    </div>
+</section>
+
+<!-- Testimonials -->
+<section style="margin-top: 5rem; background: white; padding: 4rem 2rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+    <h2 class="section-title">Wat klanten zeggen</h2>
+    <p class="section-subtitle">Ervaring van ondernemers die ons vertrouwen</p>
+    
+    <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 3rem;">
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #6ab187;">
+            <p style="color: #555; line-height: 1.8; margin-bottom: 1rem; font-style: italic;">"Lynq heeft onze volledige administratie overgenomen. Eindelijk kan ik me focussen op mijn bedrijf!"</p>
+            <p style="color: #6ab187; font-weight: bold;">- Maria, Online Retailer</p>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #6ab187;">
+            <p style="color: #555; line-height: 1.8; margin-bottom: 1rem; font-style: italic;">"Snelle service en altijd bereikbaar. Precies wat je als ondernemer nodig hebt."</p>
+            <p style="color: #6ab187; font-weight: bold;">- Jan, Bouwbedrijf</p>
+        </div>
+        
+        <div style="background: #f8f9fa; padding: 2rem; border-radius: 10px; border-left: 4px solid #6ab187;">
+            <p style="color: #555; line-height: 1.8; margin-bottom: 1rem; font-style: italic;">"Het fiscale advies heeft me duizenden euro's bespaard. Zeer aan te bevelen!"</p>
+            <p style="color: #6ab187; font-weight: bold;">- Lisa, Consultant</p>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section style="margin-top: 5rem; text-align: center; background: linear-gradient(135deg, #6ab187 0%, #5a9a75 100%); padding: 4rem 2rem; border-radius: 10px; color: white;">
+    <h2 style="font-size: 2.5rem; margin-bottom: 1rem;">Klaar om uw administratie uit handen te geven?</h2>
+    <p style="font-size: 1.2rem; margin-bottom: 2rem; max-width: 600px; margin-left: auto; margin-right: auto;">
+        Neem contact op voor een vrijblijvend gesprek. We kijken samen naar de beste oplossing voor uw situatie.
+    </p>
+    <a href="/contact" class="cta-button" style="background: white; color: #2c3e50;">Plan een kennismakingsgesprek</a>
+</section>
+{% endblock %}

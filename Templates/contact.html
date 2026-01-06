@@ -1,0 +1,169 @@
+{% extends 'main.html' %}
+
+{% block hero %}
+<section class="hero" style="padding: 3rem 2rem;">
+    <h1>Contact</h1>
+    <p>Neem contact met ons op voor een vrijblijvend gesprek</p>
+</section>
+{% endblock %}
+
+{% block content %}
+<div style="display: grid; grid-template-columns: 1fr 1fr; gap: 3rem; max-width: 1000px; margin: 0 auto;">
+    
+    <!-- Contact Info -->
+    <div>
+        <h2 style="color: #2c3e50; margin-bottom: 2rem;">Contactgegevens</h2>
+        
+        <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); margin-bottom: 2rem;">
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #6ab187; margin-bottom: 0.5rem;">📧 Email</h3>
+                <p style="color: #555; font-size: 1.1rem;">info@lynqup.net</p>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #6ab187; margin-bottom: 0.5rem;">📞 Telefoon</h3>
+                <p style="color: #555; font-size: 1.1rem;">+31 (0)6 45414216</p>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <h3 style="color: #6ab187; margin-bottom: 0.5rem;">📍 Adres</h3>
+                <p style="color: #555; font-size: 1.1rem;">
+                    Voorbeeldstraat 123<br>
+                    1234 AB Amsterdam<br>
+                    Nederland
+                </p>
+            </div>
+            
+            <div>
+                <h3 style="color: #6ab187; margin-bottom: 0.5rem;">🕐 Openingstijden</h3>
+                <p style="color: #555;">
+                    Maandag - Vrijdag: 9:00 - 17:00<br>
+                    Weekend: Gesloten
+                </p>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Contact Form -->
+    <div>
+        <h2 style="color: #2c3e50; margin-bottom: 2rem;">Stuur een bericht</h2>
+        
+        <form id="contactForm" method="POST" style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+            {% csrf_token %}
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: #2c3e50; font-weight: 500; margin-bottom: 0.5rem;">Naam *</label>
+                <input id='name' type="text" name="name" required style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: #2c3e50; font-weight: 500; margin-bottom: 0.5rem;">Email *</label>
+                <input id='email' type="email" name="email" required style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: #2c3e50; font-weight: 500; margin-bottom: 0.5rem;">Telefoon</label>
+                <input id='phone' type="tel" name="phone" style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s;">
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: #2c3e50; font-weight: 500; margin-bottom: 0.5rem;">Onderwerp</label>
+                <select id='subject' name="subject" style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; transition: border-color 0.3s;">
+                    <option value="">Selecteer een onderwerp</option>
+                    <option value="algemeen">Algemene vraag</option>
+                    <option value="offerte">Offerte aanvraag</option>
+                    <option value="boekhouding">Boekhouding</option>
+                    <option value="salaris">Salarisadministratie</option>
+                    <option value="belasting">Belastingadvies</option>
+                </select>
+            </div>
+            
+            <div style="margin-bottom: 1.5rem;">
+                <label style="display: block; color: #2c3e50; font-weight: 500; margin-bottom: 0.5rem;">Bericht *</label>
+                <textarea id = 'message' name="message" required rows="5" style="width: 100%; padding: 0.75rem; border: 2px solid #e0e0e0; border-radius: 5px; font-size: 1rem; resize: vertical; font-family: inherit; transition: border-color 0.3s;"></textarea>
+            </div>
+            <div id="formMessage" style="display:none; margin-bottom:1rem;"></div>
+
+            <button id="submitBtn" type="submit" class="cta-button" style="width: 100%; margin: 0; cursor: pointer; border: none;">
+                Verstuur bericht
+            </button>
+        </form>
+    </div>
+</div>
+
+<style>
+    input:focus, textarea:focus, select:focus {
+        outline: none;
+        border-color: #6ab187 !important;
+    }
+    
+    @media (max-width: 768px) {
+        div[style*="grid-template-columns"] {
+            grid-template-columns: 1fr !important;
+        }
+    }
+</style>
+
+<!-- EmailJS SDK -->
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+
+<script>
+    // Initialize EmailJS
+    // Je moet dit vervangen met jouw eigen User ID van EmailJS
+    emailjs.init("4_qTU6YX87lN6pvC-"); // Dit krijg je van emailjs.com
+    
+    const form = document.getElementById('contactForm');
+    const formMessage = document.getElementById('formMessage');
+    const submitBtn = document.getElementById('submitBtn');
+    
+    form.addEventListener('submit', function(e) {
+        e.preventDefault();
+        
+        // Show loading state
+        submitBtn.textContent = 'Versturen...';
+        submitBtn.classList.add('loading');
+        formMessage.style.display = 'none';
+        
+        // Get form values
+        const templateParams = {
+            from_name: document.getElementById('name').value,
+            from_email: document.getElementById('email').value,
+            phone: document.getElementById('phone').value,
+            subject: document.getElementById('subject').value || 'Geen onderwerp',
+            message: document.getElementById('message').value
+        };
+        
+        // Send email using EmailJS
+        emailjs.send('service_gbyev38', 'template_ty0126l', templateParams)
+            .then(function(response) {
+                // Success
+                formMessage.style.display = 'block';
+                formMessage.style.backgroundColor = '#d4edda';
+                formMessage.style.color = '#155724';
+                formMessage.style.border = '1px solid #c3e6cb';
+                formMessage.textContent = 'Bedankt voor uw bericht! We nemen zo snel mogelijk contact op.';
+                
+                // Reset form
+                form.reset();
+                
+                // Reset button
+                submitBtn.textContent = 'Verstuur bericht';
+                submitBtn.classList.remove('loading');
+            }, function(error) {
+                // Error
+                formMessage.style.display = 'block';
+                formMessage.style.backgroundColor = '#f8d7da';
+                formMessage.style.color = '#721c24';
+                formMessage.style.border = '1px solid #f5c6cb';
+                formMessage.textContent = 'Er ging iets mis. Probeer het opnieuw of bel ons direct.';
+                
+                // Reset button
+                submitBtn.textContent = 'Verstuur bericht';
+                submitBtn.classList.remove('loading');
+                
+                console.error('EmailJS error:', error);
+            });
+    });
+</script>
+
+{% endblock %}

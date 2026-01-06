@@ -1,0 +1,184 @@
+{% extends 'main.html' %}
+
+{% block hero %}
+<section class="hero" style="padding: 3rem 2rem;">
+    <h1>Word Klant!</h1>
+    <p>Eenvoudig en transparant - kies het pakket dat bij u past</p>
+</section>
+{% endblock %}
+
+{% block content %}
+<div style="max-width: 1100px; margin: 0 auto;">
+    
+    <!-- Hoe werkt het -->
+    <section style="margin-bottom: 4rem; text-align: center;">
+        <h2 style="color: #2c3e50; margin-bottom: 1rem; font-size: 2rem;">Hoe werkt het?</h2>
+        <p style="color: #7f8c8d; margin-bottom: 3rem; font-size: 1.1rem;">In 3 eenvoudige stappen aan de slag</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+                <div style="background: #6ab187; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: bold; margin: 0 auto 1rem;">1</div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Kennismaking</h3>
+                <p style="color: #555; line-height: 1.6;">Neem contact op voor een vrijblijvend gesprek. We bespreken uw situatie en wensen.</p>
+            </div>
+            
+            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+                <div style="background: #6ab187; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: bold; margin: 0 auto 1rem;">2</div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Offerte op maat</h3>
+                <p style="color: #555; line-height: 1.6;">U ontvangt een transparante offerte afgestemd op uw specifieke behoeften.</p>
+            </div>
+            
+            <div style="background: white; padding: 2rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1);">
+                <div style="background: #6ab187; color: white; width: 60px; height: 60px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-size: 1.8rem; font-weight: bold; margin: 0 auto 1rem;">3</div>
+                <h3 style="color: #2c3e50; margin-bottom: 1rem;">Direct starten</h3>
+                <p style="color: #555; line-height: 1.6;">Na akkoord gaan we direct aan de slag. Wij nemen uw administratie over.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Pakketten -->
+    <section style="margin-bottom: 4rem;">
+        <h2 style="color: #2c3e50; margin-bottom: 1rem; font-size: 2rem; text-align: center;">Onze Pakketten</h2>
+        <p style="color: #7f8c8d; margin-bottom: 3rem; font-size: 1.1rem; text-align: center;">Transparante prijzen, geen verborgen kosten</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem;">
+            
+            <!-- Starter Pakket -->
+            <div style="background: white; padding: 2.5rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); border-top: 5px solid #6ab187;">
+                <h3 style="color: #6ab187; margin-bottom: 0.5rem; font-size: 1.8rem;">Starter</h3>
+                <p style="color: #7f8c8d; margin-bottom: 1.5rem;">Voor startende ondernemers</p>
+                <div style="margin-bottom: 2rem;">
+                    <span style="font-size: 2.5rem; font-weight: bold; color: #2c3e50;">€149</span>
+                    <span style="color: #7f8c8d;">/maand</span>
+                </div>
+                
+                <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Basis boekhouding (tot 50 transacties/mnd)</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ BTW-aangiftes</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Kwartaalrapportages</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Email support</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #ccc;">✗ Salarisadministratie</li>
+                    <li style="padding: 0.75rem 0; color: #ccc;">✗ Belastingaangifte</li>
+                </ul>
+                
+                <a href="/contact" style="display: block; text-align: center; background: #6ab187; color: white; padding: 1rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s;">Kies Starter</a>
+            </div>
+
+            <!-- Professional Pakket -->
+            <div style="background: white; padding: 2.5rem; border-radius: 10px; box-shadow: 0 5px 25px rgba(0,0,0,0.15); border-top: 5px solid #2c3e50; transform: scale(1.05); position: relative;">
+                <div style="position: absolute; top: -15px; right: 20px; background: #2c3e50; color: white; padding: 0.5rem 1rem; border-radius: 20px; font-size: 0.85rem; font-weight: bold;">POPULAIR</div>
+                <h3 style="color: #2c3e50; margin-bottom: 0.5rem; font-size: 1.8rem;">Professional</h3>
+                <p style="color: #7f8c8d; margin-bottom: 1.5rem;">Voor groeiende bedrijven</p>
+                <div style="margin-bottom: 2rem;">
+                    <span style="font-size: 2.5rem; font-weight: bold; color: #2c3e50;">€299</span>
+                    <span style="color: #7f8c8d;">/maand</span>
+                </div>
+                
+                <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Complete boekhouding (tot 150 transacties/mnd)</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ BTW-aangiftes & jaarrekening</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Maandrapportages & advies</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Telefoon & email support</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Salarisadministratie (tot 5 medewerkers)</li>
+                    <li style="padding: 0.75rem 0; color: #555;">✓ Belastingaangifte</li>
+                </ul>
+                
+                <a href="/contact" style="display: block; text-align: center; background: #2c3e50; color: white; padding: 1rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s;">Kies Professional</a>
+            </div>
+
+            <!-- Enterprise Pakket -->
+            <div style="background: white; padding: 2.5rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); border-top: 5px solid #6ab187;">
+                <h3 style="color: #6ab187; margin-bottom: 0.5rem; font-size: 1.8rem;">Enterprise</h3>
+                <p style="color: #7f8c8d; margin-bottom: 1.5rem;">Voor gevestigde ondernemingen</p>
+                <div style="margin-bottom: 2rem;">
+                    <span style="font-size: 2.5rem; font-weight: bold; color: #2c3e50;">Op maat</span>
+                </div>
+                
+                <ul style="list-style: none; padding: 0; margin-bottom: 2rem;">
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Volledige financiële administratie</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Onbeperkte transacties</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Strategisch financieel advies</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Dedicated adviseur</li>
+                    <li style="padding: 0.75rem 0; border-bottom: 1px solid #f0f0f0; color: #555;">✓ Salarisadministratie (onbeperkt)</li>
+                    <li style="padding: 0.75rem 0; color: #555;">✓ Fiscale optimalisatie</li>
+                </ul>
+                
+                <a href="/contact" style="display: block; text-align: center; background: #6ab187; color: white; padding: 1rem; border-radius: 5px; text-decoration: none; font-weight: bold; transition: background 0.3s;">Vraag offerte aan</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Extra diensten -->
+    <section style="background: white; padding: 3rem; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); margin-bottom: 4rem;">
+        <h2 style="color: #2c3e50; margin-bottom: 2rem; text-align: center; font-size: 2rem;">Extra Diensten</h2>
+        <p style="color: #7f8c8d; text-align: center; margin-bottom: 2rem;">Los bij te bestellen of als aanvulling op uw pakket</p>
+        
+        <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 2rem;">
+            <div style="padding: 1.5rem; border: 2px solid #f0f0f0; border-radius: 8px;">
+                <h4 style="color: #6ab187; margin-bottom: 0.5rem;">📄 Jaarrekening</h4>
+                <p style="color: #555; margin-bottom: 0.5rem;">Vanaf €450</p>
+                <p style="color: #7f8c8d; font-size: 0.9rem;">Complete opstelling inclusief toelichting</p>
+            </div>
+            
+            <div style="padding: 1.5rem; border: 2px solid #f0f0f0; border-radius: 8px;">
+                <h4 style="color: #6ab187; margin-bottom: 0.5rem;">📊 Businessplan</h4>
+                <p style="color: #555; margin-bottom: 0.5rem;">Vanaf €750</p>
+                <p style="color: #7f8c8d; font-size: 0.9rem;">Inclusief financiële prognoses</p>
+            </div>
+            
+            <div style="padding: 1.5rem; border: 2px solid #f0f0f0; border-radius: 8px;">
+                <h4 style="color: #6ab187; margin-bottom: 0.5rem;">⚖️ Fiscaal advies</h4>
+                <p style="color: #555; margin-bottom: 0.5rem;">€125/uur</p>
+                <p style="color: #7f8c8d; font-size: 0.9rem;">Specialistisch belastingadvies</p>
+            </div>
+            
+            <div style="padding: 1.5rem; border: 2px solid #f0f0f0; border-radius: 8px;">
+                <h4 style="color: #6ab187; margin-bottom: 0.5rem;">🔄 Administratie overname</h4>
+                <p style="color: #555; margin-bottom: 0.5rem;">Op aanvraag</p>
+                <p style="color: #7f8c8d; font-size: 0.9rem;">Wisselen van boekhouder</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ -->
+    <section style="max-width: 800px; margin: 0 auto 4rem;">
+        <h2 style="color: #2c3e50; margin-bottom: 2rem; text-align: center; font-size: 2rem;">Veelgestelde vragen</h2>
+        
+        <div style="background: white; border-radius: 10px; box-shadow: 0 3px 15px rgba(0,0,0,0.1); overflow: hidden;">
+            <div style="padding: 1.5rem; border-bottom: 1px solid #f0f0f0;">
+                <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Kan ik altijd opzeggen?</h4>
+                <p style="color: #555; line-height: 1.6;">Ja, alle pakketten hebben een opzegtermijn van 1 maand. Geen langlopende contracten.</p>
+            </div>
+            
+            <div style="padding: 1.5rem; border-bottom: 1px solid #f0f0f0;">
+                <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Wat als ik meer transacties heb?</h4>
+                <p style="color: #555; line-height: 1.6;">Extra transacties worden apart gefactureerd tegen een vast tarief. We bespreken dit vooraf met u.</p>
+            </div>
+            
+            <div style="padding: 1.5rem; border-bottom: 1px solid #f0f0f0;">
+                <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Hoe lever ik mijn administratie aan?</h4>
+                <p style="color: #555; line-height: 1.6;">Via onze beveiligde online portal. U krijgt hiervoor persoonlijke inloggegevens.</p>
+            </div>
+            
+            <div style="padding: 1.5rem;">
+                <h4 style="color: #2c3e50; margin-bottom: 0.5rem;">Is een kennismakingsgesprek echt vrijblijvend?</h4>
+                <p style="color: #555; line-height: 1.6;">Absoluut! Er zijn geen kosten verbonden aan een kennismakingsgesprek.</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- Call to Action -->
+    <div style="text-align: center; background: linear-gradient(135deg, #6ab187 0%, #5a9a75 100%); padding: 3rem; border-radius: 10px; color: white;">
+        <h2 style="margin-bottom: 1rem; font-size: 2rem;">Klaar om te starten?</h2>
+        <p style="font-size: 1.2rem; margin-bottom: 2rem;">Neem vandaag nog contact op voor een vrijblijvend gesprek</p>
+        <a href="/contact" class="cta-button" style="background: white; color: #2c3e50;">Plan een gesprek</a>
+    </div>
+
+</div>
+
+<style>
+    a[href="/contact"]:hover {
+        opacity: 0.9;
+    }
+</style>
+{% endblock %}
