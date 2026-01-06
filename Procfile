@@ -1,1 +1,1 @@
-web: gunicorn studybud.wsgi:application --bind 0.0.0.0:$PORT --log-file -
+web: python manage.py migrate && gunicorn studybud.wsgi --timeout 120 --log-file -
