@@ -34,6 +34,11 @@ ALLOWED_HOSTS = [
 ]
 ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
 
+CSRF_TRUSTED_ORIGINS = [
+    'https://*.railway.app',
+    'https://lynqup.net',
+    'https://www.lynqup.net',
+]
 # Application definition
 
 INSTALLED_APPS = [
