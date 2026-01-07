@@ -48,7 +48,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     #comment out this redirect for developpement via Railway
-    "base.middleware.RedirectApexToWWW",
+    #"base.middleware.RedirectApexToWWW",
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
