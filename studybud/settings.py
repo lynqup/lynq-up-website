@@ -32,7 +32,7 @@ ALLOWED_HOSTS = [
     'lynqup.nl',
     'www.lynqup.nl',
 ]
-
+ALLOWED_HOSTS = os.environ.get('ALLOWED_HOSTS', 'localhost').split(',')
 
 # Application definition
 
