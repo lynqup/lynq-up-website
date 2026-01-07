@@ -1,0 +1,13 @@
+.whatsapp-button {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #25D366; /* WhatsApp groen */
+    color: white;
+    text-decoration: none;
+    border-radius: 6px;
+    font-weight: bold;
+}
+
+.whatsapp-button:hover {
+    background-color: #1ebe57;
+}
