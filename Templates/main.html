@@ -224,6 +224,8 @@
     <!-- Navbar -->
     <nav class="navbar">
         <div class="nav-container">
+            {% load static %}
+            <!-- Onderstaande line veroorzaakt een Service error 500-->
             <img src="{% static\images\logo_lynqup.png %}" alt="Logo"> 
             <a href="{% url 'home' %}" class="logo">LYNQUP</a>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
